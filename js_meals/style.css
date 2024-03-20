@@ -1,0 +1,35 @@
+img{
+    border-radius: 5px !important;
+}
+.col-md-3{
+    margin: 30px !important;
+}
+p{
+    font-weight: bold;
+    font-size: 22px;
+}
+#navbar{
+    background-color: rgb(18, 14, 14);
+    display:flex; 
+}
+li{
+    color: white;
+    list-style-type : none;
+    display: inline;
+    margin-left: 30px;
+    flex-basis: 40%;
+}
+#nav-elements{
+    text-align: center !important;
+    padding-top: 15px;
+    
+}
+#title{
+    font-size: 30px;
+}
+#footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

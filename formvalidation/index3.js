@@ -5,7 +5,7 @@ function validate(){
     var cpassword = document.getElementById('cpassword').value
     
     checkusername(username)
-    chechemail(email)
+    checkemail(email)
     checkpassword(password)
     checkpasswordsmatch(password , cpassword)
 
@@ -36,5 +36,31 @@ function checkemail(email)
     else{
         document.getElementById('email').classList.add('error')
         document.getElementById('email_error').innerText='Email must be valid and must include @gmail'
+    }
+}
+
+function checkpassword(password){
+    if(password.length>7 && password.includes('.'))
+    {
+        document.getElementById('password').classList.add('success')
+        document.getElementById('password').classList.replace('error','success')
+        document.getElementById('password').innerHTML = ''
+    }
+    else{
+        document.getElementById('password').classList.add('error')
+        document.getElementById('password_error').innerText='Password must be 8 letter long and must include .'
+    }
+}
+
+function checkpasswordsmatch(password, cpassword){
+    if(password==cpassword && password !='' )
+    {
+        document.getElementById('cpassword').classList.add('success')
+        document.getElementById('cpassword').classList.replace('error','success')
+        document.getElementById('cpassword').innerHTML = ''
+    }
+    else{
+        document.getElementById('cpassword').classList.add('error')
+        document.getElementById('cpassword_error').innerText='Password must be same as above password'
     }
 }
